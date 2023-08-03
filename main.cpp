@@ -1,12 +1,7 @@
 #include "queue_frame.hpp"
 #include <unistd.h>
-#include <iostream>
-//#include <threadPool.hpp>
-// #include "ttt.hpp"
 
 std::vector<std::future<int> > ret_vec;
-int a;
-int b;
 
 int test()
 {
@@ -17,21 +12,29 @@ int test()
 
 int test2()
 {
-   // printf("bbb\n");
-    sleep(3);
+    sleep(1);
     printf("this is the test2 fun\n");
     return 10;
 }
 
+int test3()
+{
+    sleep(4);
+    printf("this is the test3 fun\n");
+    return 11;
+}
+
 int main()
 {
-    QueueFrame q(2 , 2);  
+    QueueFrame q(2 , 3);  
 
-    q.enqueue(1 , test);
-    q.enqueue(1 , test2);
+    ret_vec.emplace_back(q.enqueue(1 , test));
+    ret_vec.emplace_back(q.enqueue(1 , test3));
+    ret_vec.emplace_back(q.enqueue(2 , test2));
     q.start();
 
-    sleep(10);
-
+    std::cout << ret_vec[0].get() << std::endl
+              << ret_vec[1].get() << std::endl
+              << ret_vec[2].get() << std::endl;
     return 0;
 }

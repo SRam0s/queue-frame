@@ -80,14 +80,13 @@ decltype(auto) QueueFrame::enqueue(int&& queue_num, F&& f, Args&&... args)
         std::unique_lock<std::mutex> lock(queue_mutex);
         std::vector<std::packaged_task<void()> > queue_tmp;
 
-        if(tasks.size() < queue_num)
+        if(tasks_vec.size() < queue_num)
         {
             queue_tmp.emplace_back(std::move(task));
             tasks_vec.emplace_back(std::move(queue_tmp));
-
         }else
         {
-            tasks_vec[queue_num].emplace_back(std::move(task));
+            tasks_vec[queue_num - 1].emplace_back(std::move(task));
         }
 
 

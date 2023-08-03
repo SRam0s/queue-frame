@@ -5,8 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/APP_RUN.dir/main.cpp.o.d"
   "CMakeFiles/APP_RUN.dir/queue_frame.cpp.o"
   "CMakeFiles/APP_RUN.dir/queue_frame.cpp.o.d"
-  "CMakeFiles/APP_RUN.dir/threadpool/threadPool.cpp.o"
-  "CMakeFiles/APP_RUN.dir/threadpool/threadPool.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

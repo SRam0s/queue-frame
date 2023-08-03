@@ -33,7 +33,7 @@ int QueueFrame::start()
                 ret_vec.emplace_back(this->tasks_vec[i][j].get_future());
                 tasks.emplace_back(std::move(this->tasks_vec[i][j]));
 
-                 std::cout << "prepare to notify_one" << std::endl;
+                //  std::cout << "prepare to notify_one" << std::endl;
 
 
                 condition.notify_one();
@@ -42,7 +42,7 @@ int QueueFrame::start()
         for(int j = 0; j < tasks_vec[i].size(); j++)
         {
             ret_vec[j].wait();
-            std::cout << "pass" << std::endl;
+            // std::cout << "pass" << std::endl;
         }
 
         ret_vec.clear();

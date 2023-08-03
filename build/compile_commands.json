@@ -1,12 +1,14 @@
 [
 {
   "directory": "/home/tjsiasun/work/queue_frame/build",
-  "command": "/usr/local/bin/g++ -I/home/tjsiasun/work/queue_frame/build -I/home/tjsiasun/work/queue_frame -g -std=gnu++17 -o CMakeFiles/APP_RUN.dir/main.cpp.o -c /home/tjsiasun/work/queue_frame/main.cpp",
-  "file": "/home/tjsiasun/work/queue_frame/main.cpp"
+  "command": "/usr/local/bin/g++  -I/home/tjsiasun/work/queue_frame/build -I/home/tjsiasun/work/queue_frame -g -std=gnu++17 -o CMakeFiles/APP_RUN.dir/main.cpp.o -c /home/tjsiasun/work/queue_frame/main.cpp",
+  "file": "/home/tjsiasun/work/queue_frame/main.cpp",
+  "output": "CMakeFiles/APP_RUN.dir/main.cpp.o"
 },
 {
   "directory": "/home/tjsiasun/work/queue_frame/build",
-  "command": "/usr/local/bin/g++ -I/home/tjsiasun/work/queue_frame/build -I/home/tjsiasun/work/queue_frame -g -std=gnu++17 -o CMakeFiles/APP_RUN.dir/queue_frame.cpp.o -c /home/tjsiasun/work/queue_frame/queue_frame.cpp",
-  "file": "/home/tjsiasun/work/queue_frame/queue_frame.cpp"
+  "command": "/usr/local/bin/g++  -I/home/tjsiasun/work/queue_frame/build -I/home/tjsiasun/work/queue_frame -g -std=gnu++17 -o CMakeFiles/APP_RUN.dir/queue_frame.cpp.o -c /home/tjsiasun/work/queue_frame/queue_frame.cpp",
+  "file": "/home/tjsiasun/work/queue_frame/queue_frame.cpp",
+  "output": "CMakeFiles/APP_RUN.dir/queue_frame.cpp.o"
 }
 ]
