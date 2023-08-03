@@ -1,5 +1,37 @@
 #include "queue_frame.hpp"
 
+QueueFrame::QueueFrame(int sync_max_num ,int total_tasks)    
+:   stop(false)
+{
+    this->enqueue_tasks_remaining = total_tasks;
+
+    for(size_t i = 0;i<sync_max_num;++i)
+        workers.emplace_back(
+            [this]
+            {
+                for(;;)
+                {
+                    std::packaged_task<void()> task;
+
+                    {
+                        std::unique_lock<std::mutex> lock(this->queue_mutex);
+                        this->condition.wait(lock,
+                            [this]{ return this->stop || !this->tasks.empty(); });
+                        if(this->stop && this->tasks.empty())
+                            return;
+                        task = std::move(this->tasks.back());
+                        this->tasks.pop_back();
+                        if (tasks.empty()) {
+                            condition_producers.notify_one(); // notify the destructor that the queue is empty
+                        }
+                    }
+
+                    task();
+                }
+            }
+        );
+}
+
 QueueFrame::~QueueFrame()
 {
     {
