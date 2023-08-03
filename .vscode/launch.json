@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Siasun",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build_code",
+            // "environment": [
+            //     {
+            //         "name": "PATH",
+            //         "value": "/opt/Qt5.14.2/5.14.2/gcc_64/bin"
+            //     }
+            // ],
+            "externalConsole": false,
+            "miDebuggerPath": "/usr/bin/gdb",
+            "visualizerFile": "/home/tjsiasun/.config/Code/User/workspaceStorage/4f3eaa81b860abffcfa9e0d549bc9ec8/tonka3000.qtvsctools/qt.natvis.xml"
+        }
+    ]
+}
