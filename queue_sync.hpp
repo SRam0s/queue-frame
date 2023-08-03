@@ -6,7 +6,7 @@
 #include <queue>
 #include <iostream>
 
-class QueueFrame
+class QueueSync
 {
 private:
 
@@ -24,8 +24,22 @@ private:
     bool stop;
 
 public:
-    QueueFrame(int sync_max_num ,int total_tasks);
-    ~QueueFrame();
+    /** @brief 
+
+    @param out_filename 编码的输出文件名，编码器会根据此名称的后缀来推断封装格式
+    @param enc_name 要使用的ffmpeg的编码器名称，例如：h264_qsv
+    @param width 输入图像的width
+    @param height 输入图像的height
+    @param fps 编码的帧率
+    @param fmt 输入图像的格式,目前支持：E_PIX_FMT_NV12 ,
+                                    E_PIX_FMT_NV21 ,
+                                    E_PIX_FMT_YUV420P ,
+                                    E_PIX_FMT_YUYV422 , 
+                                    E_PIX_FMT_UYVY422
+    @return 成功：0 异常：其他值
+    */
+    QueueSync(int sync_max_num ,int total_tasks);
+    ~QueueSync();
 
     template<class F, class... Args>
     decltype(auto) enqueue(int&& queue_num , F&& f, Args&&... args);
@@ -35,7 +49,7 @@ public:
 };
 
 template<class F, class... Args>
-decltype(auto) QueueFrame::enqueue(int&& queue_num, F&& f, Args&&... args)
+decltype(auto) QueueSync::enqueue(int&& queue_num, F&& f, Args&&... args)
 {
     using return_type = std::invoke_result_t<F, Args...>;
 

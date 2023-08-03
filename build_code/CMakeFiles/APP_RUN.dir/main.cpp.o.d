@@ -1,7 +1,6 @@
-CMakeFiles/APP_RUN.dir/threadpool/threadPool.cpp.o: \
- /home/tjsiasun/work/queue_frame/threadpool/threadPool.cpp \
- /usr/include/stdc-predef.h \
- /home/tjsiasun/work/queue_frame/threadpool/threadPool.hpp \
+CMakeFiles/APP_RUN.dir/main.cpp.o: \
+ /home/tjsiasun/work/queue_frame/main.cpp /usr/include/stdc-predef.h \
+ /home/tjsiasun/work/queue_frame/queue_sync.hpp \
  /usr/local/include/c++/11.4.0/functional \
  /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -188,4 +187,29 @@ CMakeFiles/APP_RUN.dir/threadpool/threadPool.cpp.o: \
  /usr/local/include/c++/11.4.0/queue /usr/local/include/c++/11.4.0/deque \
  /usr/local/include/c++/11.4.0/bits/stl_deque.h \
  /usr/local/include/c++/11.4.0/bits/deque.tcc \
- /usr/local/include/c++/11.4.0/bits/stl_queue.h
+ /usr/local/include/c++/11.4.0/bits/stl_queue.h \
+ /usr/local/include/c++/11.4.0/iostream \
+ /usr/local/include/c++/11.4.0/ostream /usr/local/include/c++/11.4.0/ios \
+ /usr/local/include/c++/11.4.0/bits/ios_base.h \
+ /usr/local/include/c++/11.4.0/bits/locale_classes.h \
+ /usr/local/include/c++/11.4.0/bits/locale_classes.tcc \
+ /usr/local/include/c++/11.4.0/streambuf \
+ /usr/local/include/c++/11.4.0/bits/streambuf.tcc \
+ /usr/local/include/c++/11.4.0/bits/basic_ios.h \
+ /usr/local/include/c++/11.4.0/bits/locale_facets.h \
+ /usr/local/include/c++/11.4.0/cwctype /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/local/include/c++/11.4.0/bits/streambuf_iterator.h \
+ /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/local/include/c++/11.4.0/bits/locale_facets.tcc \
+ /usr/local/include/c++/11.4.0/bits/basic_ios.tcc \
+ /usr/local/include/c++/11.4.0/bits/ostream.tcc \
+ /usr/local/include/c++/11.4.0/istream \
+ /usr/local/include/c++/11.4.0/bits/istream.tcc /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h

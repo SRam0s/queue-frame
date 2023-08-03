@@ -1,4 +1,4 @@
-#include "queue_frame.hpp"
+#include "queue_sync.hpp"
 #include <unistd.h>
 
 std::vector<std::future<int> > ret_vec;
@@ -26,7 +26,7 @@ int test3()
 
 int main()
 {
-    QueueFrame q(2 , 3);  
+    QueueSync q(2 , 3);  
 
     ret_vec.emplace_back(q.enqueue(1 , test));
     ret_vec.emplace_back(q.enqueue(1 , test3));

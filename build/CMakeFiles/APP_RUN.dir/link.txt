@@ -1,1 +1,1 @@
-/usr/local/bin/g++ -g CMakeFiles/APP_RUN.dir/main.cpp.o CMakeFiles/APP_RUN.dir/queue_frame.cpp.o -o APP_RUN  -lpthread 
+/usr/local/bin/g++ -g CMakeFiles/APP_RUN.dir/main.cpp.o CMakeFiles/APP_RUN.dir/queue_sync.cpp.o -o APP_RUN  -lpthread 

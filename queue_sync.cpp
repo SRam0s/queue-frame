@@ -1,6 +1,6 @@
-#include "queue_frame.hpp"
+#include "queue_sync.hpp"
 
-QueueFrame::QueueFrame(int sync_max_num ,int total_tasks)    
+QueueSync::QueueSync(int sync_max_num ,int total_tasks)    
 :   stop(false)
 {
     this->enqueue_tasks_remaining = total_tasks;
@@ -32,7 +32,7 @@ QueueFrame::QueueFrame(int sync_max_num ,int total_tasks)
         );
 }
 
-QueueFrame::~QueueFrame()
+QueueSync::~QueueSync()
 {
     {
 		std::unique_lock<std::mutex> lock(queue_mutex);
@@ -45,7 +45,7 @@ QueueFrame::~QueueFrame()
 	}
 }
 
-int QueueFrame::start()
+int QueueSync::start()
 {
     std::unique_lock<std::mutex> lock(this->start_mutex);
     this->condition_start.wait(lock,

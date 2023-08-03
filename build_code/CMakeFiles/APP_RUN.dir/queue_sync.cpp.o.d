@@ -1,5 +1,6 @@
-CMakeFiles/APP_RUN.dir/main.cpp.o: \
- /home/tjsiasun/work/queue_frame/main.cpp /usr/include/stdc-predef.h \
+CMakeFiles/APP_RUN.dir/queue_sync.cpp.o: \
+ /home/tjsiasun/work/queue_frame/queue_sync.cpp \
+ /usr/include/stdc-predef.h \
  /home/tjsiasun/work/queue_frame/queue_sync.hpp \
  /usr/local/include/c++/11.4.0/functional \
  /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -206,10 +207,4 @@ CMakeFiles/APP_RUN.dir/main.cpp.o: \
  /usr/local/include/c++/11.4.0/bits/basic_ios.tcc \
  /usr/local/include/c++/11.4.0/bits/ostream.tcc \
  /usr/local/include/c++/11.4.0/istream \
- /usr/local/include/c++/11.4.0/bits/istream.tcc /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
+ /usr/local/include/c++/11.4.0/bits/istream.tcc

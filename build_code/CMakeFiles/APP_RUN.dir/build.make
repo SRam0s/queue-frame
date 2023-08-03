@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/tjsiasun/work/queue_frame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tjsiasun/work/queue_frame/build
+CMAKE_BINARY_DIR = /home/tjsiasun/work/queue_frame/build_code
 
 # Include any dependencies generated for this target.
 include CMakeFiles/APP_RUN.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/APP_RUN.dir/flags.make
 CMakeFiles/APP_RUN.dir/main.cpp.o: CMakeFiles/APP_RUN.dir/flags.make
 CMakeFiles/APP_RUN.dir/main.cpp.o: /home/tjsiasun/work/queue_frame/main.cpp
 CMakeFiles/APP_RUN.dir/main.cpp.o: CMakeFiles/APP_RUN.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tjsiasun/work/queue_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/APP_RUN.dir/main.cpp.o"
-	/usr/local/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/APP_RUN.dir/main.cpp.o -MF CMakeFiles/APP_RUN.dir/main.cpp.o.d -o CMakeFiles/APP_RUN.dir/main.cpp.o -c /home/tjsiasun/work/queue_frame/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tjsiasun/work/queue_frame/build_code/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/APP_RUN.dir/main.cpp.o"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/APP_RUN.dir/main.cpp.o -MF CMakeFiles/APP_RUN.dir/main.cpp.o.d -o CMakeFiles/APP_RUN.dir/main.cpp.o -c /home/tjsiasun/work/queue_frame/main.cpp
 
 CMakeFiles/APP_RUN.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APP_RUN.dir/main.cpp.i"
-	/usr/local/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tjsiasun/work/queue_frame/main.cpp > CMakeFiles/APP_RUN.dir/main.cpp.i
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tjsiasun/work/queue_frame/main.cpp > CMakeFiles/APP_RUN.dir/main.cpp.i
 
 CMakeFiles/APP_RUN.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APP_RUN.dir/main.cpp.s"
-	/usr/local/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tjsiasun/work/queue_frame/main.cpp -o CMakeFiles/APP_RUN.dir/main.cpp.s
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tjsiasun/work/queue_frame/main.cpp -o CMakeFiles/APP_RUN.dir/main.cpp.s
 
 CMakeFiles/APP_RUN.dir/queue_sync.cpp.o: CMakeFiles/APP_RUN.dir/flags.make
 CMakeFiles/APP_RUN.dir/queue_sync.cpp.o: /home/tjsiasun/work/queue_frame/queue_sync.cpp
 CMakeFiles/APP_RUN.dir/queue_sync.cpp.o: CMakeFiles/APP_RUN.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tjsiasun/work/queue_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/APP_RUN.dir/queue_sync.cpp.o"
-	/usr/local/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/APP_RUN.dir/queue_sync.cpp.o -MF CMakeFiles/APP_RUN.dir/queue_sync.cpp.o.d -o CMakeFiles/APP_RUN.dir/queue_sync.cpp.o -c /home/tjsiasun/work/queue_frame/queue_sync.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tjsiasun/work/queue_frame/build_code/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/APP_RUN.dir/queue_sync.cpp.o"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/APP_RUN.dir/queue_sync.cpp.o -MF CMakeFiles/APP_RUN.dir/queue_sync.cpp.o.d -o CMakeFiles/APP_RUN.dir/queue_sync.cpp.o -c /home/tjsiasun/work/queue_frame/queue_sync.cpp
 
 CMakeFiles/APP_RUN.dir/queue_sync.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APP_RUN.dir/queue_sync.cpp.i"
-	/usr/local/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tjsiasun/work/queue_frame/queue_sync.cpp > CMakeFiles/APP_RUN.dir/queue_sync.cpp.i
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tjsiasun/work/queue_frame/queue_sync.cpp > CMakeFiles/APP_RUN.dir/queue_sync.cpp.i
 
 CMakeFiles/APP_RUN.dir/queue_sync.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APP_RUN.dir/queue_sync.cpp.s"
-	/usr/local/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tjsiasun/work/queue_frame/queue_sync.cpp -o CMakeFiles/APP_RUN.dir/queue_sync.cpp.s
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tjsiasun/work/queue_frame/queue_sync.cpp -o CMakeFiles/APP_RUN.dir/queue_sync.cpp.s
 
 # Object files for target APP_RUN
 APP_RUN_OBJECTS = \
@@ -109,7 +109,7 @@ APP_RUN: CMakeFiles/APP_RUN.dir/main.cpp.o
 APP_RUN: CMakeFiles/APP_RUN.dir/queue_sync.cpp.o
 APP_RUN: CMakeFiles/APP_RUN.dir/build.make
 APP_RUN: CMakeFiles/APP_RUN.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tjsiasun/work/queue_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable APP_RUN"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tjsiasun/work/queue_frame/build_code/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable APP_RUN"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/APP_RUN.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/APP_RUN.dir/clean:
 .PHONY : CMakeFiles/APP_RUN.dir/clean
 
 CMakeFiles/APP_RUN.dir/depend:
-	cd /home/tjsiasun/work/queue_frame/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tjsiasun/work/queue_frame /home/tjsiasun/work/queue_frame /home/tjsiasun/work/queue_frame/build /home/tjsiasun/work/queue_frame/build /home/tjsiasun/work/queue_frame/build/CMakeFiles/APP_RUN.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tjsiasun/work/queue_frame/build_code && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tjsiasun/work/queue_frame /home/tjsiasun/work/queue_frame /home/tjsiasun/work/queue_frame/build_code /home/tjsiasun/work/queue_frame/build_code /home/tjsiasun/work/queue_frame/build_code/CMakeFiles/APP_RUN.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/APP_RUN.dir/depend
 

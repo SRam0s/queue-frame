@@ -7,8 +7,8 @@
 },
 {
   "directory": "/home/tjsiasun/work/queue_frame/build",
-  "command": "/usr/local/bin/g++  -I/home/tjsiasun/work/queue_frame/build -I/home/tjsiasun/work/queue_frame -g -std=gnu++17 -o CMakeFiles/APP_RUN.dir/queue_frame.cpp.o -c /home/tjsiasun/work/queue_frame/queue_frame.cpp",
-  "file": "/home/tjsiasun/work/queue_frame/queue_frame.cpp",
-  "output": "CMakeFiles/APP_RUN.dir/queue_frame.cpp.o"
+  "command": "/usr/local/bin/g++  -I/home/tjsiasun/work/queue_frame/build -I/home/tjsiasun/work/queue_frame -g -std=gnu++17 -o CMakeFiles/APP_RUN.dir/queue_sync.cpp.o -c /home/tjsiasun/work/queue_frame/queue_sync.cpp",
+  "file": "/home/tjsiasun/work/queue_frame/queue_sync.cpp",
+  "output": "CMakeFiles/APP_RUN.dir/queue_sync.cpp.o"
 }
 ]

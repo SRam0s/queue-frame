@@ -1,7 +1,7 @@
-CMakeFiles/APP_RUN.dir/queue_frame.cpp.o: \
- /home/tjsiasun/work/queue_frame/queue_frame.cpp \
+CMakeFiles/APP_RUN.dir/queue_sync.cpp.o: \
+ /home/tjsiasun/work/queue_frame/queue_sync.cpp \
  /usr/include/stdc-predef.h \
- /home/tjsiasun/work/queue_frame/queue_frame.hpp \
+ /home/tjsiasun/work/queue_frame/queue_sync.hpp \
  /usr/local/include/c++/11.4.0/functional \
  /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/local/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/os_defines.h \
