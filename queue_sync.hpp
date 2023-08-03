@@ -24,19 +24,12 @@ private:
     bool stop;
 
 public:
-    /** @brief 
+    /** @brief 构造函数
 
-    @param out_filename 编码的输出文件名，编码器会根据此名称的后缀来推断封装格式
-    @param enc_name 要使用的ffmpeg的编码器名称，例如：h264_qsv
-    @param width 输入图像的width
-    @param height 输入图像的height
-    @param fps 编码的帧率
-    @param fmt 输入图像的格式,目前支持：E_PIX_FMT_NV12 ,
-                                    E_PIX_FMT_NV21 ,
-                                    E_PIX_FMT_YUV420P ,
-                                    E_PIX_FMT_YUYV422 , 
-                                    E_PIX_FMT_UYVY422
-    @return 成功：0 异常：其他值
+    @param sync_max_num 同时运行的任务最大数 例如最多需要同时跑4个任务 即填4
+    @param total_tasks 任务总和 即后边需要入队的任务总数
+
+    @return 无
     */
     QueueSync(int sync_max_num ,int total_tasks);
     ~QueueSync();
@@ -44,10 +37,25 @@ public:
     template<class F, class... Args>
     decltype(auto) enqueue(int&& queue_num , F&& f, Args&&... args);
 
+
+    /** @brief 任务开始
+
+    @return 0
+    */
     int start();
 
 };
 
+
+/** @brief 将要执行的任务加入执行队列
+
+    @param queue_num 所加入任务所处的队列序号 从1开始 本框架先同时执行编号为1的任务 
+                    再依次执行标号2、3、4的任务 以此类推
+    @param f 要执行的任务函数
+    @param args 任务函数的输入参数
+
+    @return 任务函数的返回值为std::future<return_type>
+*/
 template<class F, class... Args>
 decltype(auto) QueueSync::enqueue(int&& queue_num, F&& f, Args&&... args)
 {

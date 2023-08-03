@@ -71,4 +71,6 @@ int QueueSync::start()
 
         ret_vec.clear();
     }
+
+    return 0;
 }
