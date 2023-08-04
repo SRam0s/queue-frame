@@ -38,7 +38,7 @@ Makefile*
 *.data
 build_2/
 build_qsv/
-build_code/
+build_code
 build/
 model/
 build*/
