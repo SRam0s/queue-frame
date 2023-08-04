@@ -26,13 +26,18 @@ int test3()
 
 int main()
 {
-    QueueSync q(2 , 3);  
+    QueueSync q(3 , 7);  
 
     while (1)
     {
         ret_vec.emplace_back(q.enqueue(1 , test));
         ret_vec.emplace_back(q.enqueue(1 , test3));
         ret_vec.emplace_back(q.enqueue(2 , test2));
+        ret_vec.emplace_back(q.enqueue(2 , test2));
+        ret_vec.emplace_back(q.enqueue(2 , test2));
+        ret_vec.emplace_back(q.enqueue(3 , test2));
+        ret_vec.emplace_back(q.enqueue(3 , test2));
+
         q.start();
 
         

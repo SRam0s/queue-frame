@@ -37,7 +37,7 @@ QueueSync::~QueueSync()
 {
     {
 		std::unique_lock<std::mutex> lock(queue_mutex);
-		condition_producers.wait(lock, [this] { return tasks.empty(); });
+		condition_producers.wait(lock, [this] { return tasks_vec.empty(); });
 		stop = true;
 	}
 	condition.notify_all();
@@ -52,12 +52,12 @@ int QueueSync::start()
     this->condition_start.wait(lock,
         [this]{ return (this->enqueue_tasks_remaining == 0); });
 
-    for(int i = 0; i < tasks_vec.size(); i++)
+    for(int i = 0; i < tasks_vec.size(); ++i)
     {
         {
             std::unique_lock<std::mutex> lock(queue_mutex);
 
-            for(int j = 0; j < tasks_vec[i].size(); j++)
+            for(int j = 0; j < tasks_vec[i].size(); ++j)
             {
                 ret_vec.emplace_back(this->tasks_vec[i][j].get_future());
                 tasks.emplace_back(std::move(this->tasks_vec[i][j]));
@@ -65,7 +65,7 @@ int QueueSync::start()
                 condition.notify_one();
             }
         }
-        for(int j = 0; j < tasks_vec[i].size(); j++)
+        for(int j = 0; j < tasks_vec[i].size(); ++j)
         {
             ret_vec[j].wait();
         }
