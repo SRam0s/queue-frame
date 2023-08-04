@@ -22,6 +22,7 @@
 					"linkDirectories" : 
 					[
 						"/usr/local/lib/gcc/x86_64-pc-linux-gnu/11.4.0",
+						"/usr/local/lib/x86_64-linux-gnu",
 						"/usr/local/lib64",
 						"/lib/x86_64-linux-gnu",
 						"/lib64",

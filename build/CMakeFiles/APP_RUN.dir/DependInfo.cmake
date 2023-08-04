@@ -12,8 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tjsiasun/work/queue_frame/queue_sync.cpp" "CMakeFiles/APP_RUN.dir/queue_sync.cpp.o" "gcc" "CMakeFiles/APP_RUN.dir/queue_sync.cpp.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

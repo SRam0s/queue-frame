@@ -21,6 +21,7 @@ private:
     std::vector<std::thread > workers;
 
     int enqueue_tasks_remaining;
+    int total_tasks;
     bool stop;
 
 public:

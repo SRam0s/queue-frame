@@ -1,12 +1,10 @@
-#include "queue_sync.hpp"
+#include "ttt.hpp"
 
-QueueSync::QueueSync(int sync_max_num ,int total_tasks)    
-:   stop(false)
+// the constructor just launches some amount of workers
+ThreadPool::ThreadPool(size_t threads)
+    :   stop(false)
 {
-    this->enqueue_tasks_remaining = total_tasks;
-    this->total_tasks = total_tasks;
-
-    for(size_t i = 0;i<sync_max_num;++i)
+    for(size_t i = 0;i<threads;++i)
         workers.emplace_back(
             [this]
             {
@@ -33,9 +31,9 @@ QueueSync::QueueSync(int sync_max_num ,int total_tasks)
         );
 }
 
-QueueSync::~QueueSync()
-{
-    {
+// the destructor joins all threads
+ThreadPool::~ThreadPool() {
+	{
 		std::unique_lock<std::mutex> lock(queue_mutex);
 		condition_producers.wait(lock, [this] { return tasks.empty(); });
 		stop = true;
@@ -46,35 +44,17 @@ QueueSync::~QueueSync()
 	}
 }
 
-int QueueSync::start()
+// add new work item to the pool
+template<class F, class... Args>
+decltype(auto) ThreadPool::enqueue(F&& f, Args&&... args)
 {
-    std::unique_lock<std::mutex> lock(this->start_mutex);
-    this->condition_start.wait(lock,
-        [this]{ return (this->enqueue_tasks_remaining == 0); });
+    using return_type = std::invoke_result_t<F, Args...>;
 
-    for(int i = 0; i < tasks_vec.size(); i++)
-    {
-        {
-            std::unique_lock<std::mutex> lock(queue_mutex);
+    std::packaged_task<return_type()> task(
+            std::bind(std::forward<F>(f), std::forward<Args>(args)...)
+        );
 
-            for(int j = 0; j < tasks_vec[i].size(); j++)
-            {
-                ret_vec.emplace_back(this->tasks_vec[i][j].get_future());
-                tasks.emplace_back(std::move(this->tasks_vec[i][j]));
+    std::future<return_type> res = task.get_future();
 
-                condition.notify_one();
-            }
-        }
-        for(int j = 0; j < tasks_vec[i].size(); j++)
-        {
-            ret_vec[j].wait();
-        }
-
-        ret_vec.clear();
-    }
-
-    tasks_vec.clear();
-    this->enqueue_tasks_remaining = this->total_tasks;
-
-    return 0;
+    return res;
 }
