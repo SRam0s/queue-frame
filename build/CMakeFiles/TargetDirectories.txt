@@ -1,3 +1,0 @@
-/home/tjsiasun/work/queue_frame/build/CMakeFiles/APP_RUN.dir
-/home/tjsiasun/work/queue_frame/build/CMakeFiles/edit_cache.dir
-/home/tjsiasun/work/queue_frame/build/CMakeFiles/rebuild_cache.dir
