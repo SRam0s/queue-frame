@@ -9,10 +9,10 @@ include_directories(
     /usr/local/include/
 )
 
-aux_source_directory(. main)
+aux_source_directory(. example)
 
 add_executable(${PROJECT_NAME}
-    ${main}
+    ${example}
 ) 
 target_link_libraries(${PROJECT_NAME}
     pthread

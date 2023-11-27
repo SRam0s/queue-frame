@@ -1,5 +1,5 @@
-#ifndef QUEUE_FRAME_HPP
-#define QUEUE_FRAME_HPP
+#ifndef QUEUE_SYNC_HPP
+#define QUEUE_SYNC_HPP
 
 #include <functional>
 #include <future>

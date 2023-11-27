@@ -23,7 +23,7 @@ QueueSync::QueueSync(int sync_max_num ,int total_tasks)
                         task = std::move(this->tasks.back());
                         this->tasks.pop_back();
                         if (tasks.empty()) {
-                            condition_producers.notify_one(); // notify the destructor that the queue is empty
+                            condition_producers.notify_one(); 
                         }
                     }
 
